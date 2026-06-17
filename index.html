@@ -28,6 +28,7 @@
         <a href="#funcions">Funcions</a>
         <a href="#captures">Imatges</a>
         <a href="#apk">APK</a>
+        <a href="#solicitud">Sol&middot;licitud</a>
         <a href="#contacte">Contacte</a>
       </nav>
     </header>
@@ -49,9 +50,30 @@
           <div class="logo-stage">
             <img src="images/entitapp-logo.png" alt="Logo d'Entitapp" />
           </div>
+        </div></section>
+      <section class="section impact-map" aria-labelledby="impact-title">
+        <div class="section-heading centered">
+          <p class="section-kicker">Com ajuda Entitapp</p>
+          <h2 id="impact-title">Una eina per convertir el dia a dia de l'entitat en informaci&oacute; clara.</h2>
+        </div>
+        <div class="impact-flow">
+          <article class="impact-node blue">
+            <span>1</span>
+            <h3>Organitza</h3>
+            <p>Reunions, activitats, subgrups i tasques en un sol espai.</p>
+          </article>
+          <article class="impact-node teal">
+            <span>2</span>
+            <h3>Coordina</h3>
+            <p>Ajuda la junta, les comissions i les persones volunt&agrave;ries a saber qu&egrave; toca fer.</p>
+          </article>
+          <article class="impact-node green">
+            <span>3</span>
+            <h3>Fa seguiment</h3>
+            <p>Guarda assist&egrave;ncia, acords i responsabilitats per no perdre mem&ograve;ria.</p>
+          </article>
         </div>
       </section>
-
       <section class="section intro" aria-labelledby="intro-title">
         <div>
           <p class="section-kicker">Pensada per al dia a dia</p>
@@ -137,7 +159,61 @@
         </div>
         <a class="button primary" href="https://ko-fi.com/entitapp" rel="noreferrer" target="_blank">Obrir Ko-fi</a>
       </section>
+      <section class="section request-section" id="solicitud" aria-labelledby="request-title">
+        <div class="section-heading">
+          <p class="section-kicker">Sol&middot;licitud d'&uacute;s</p>
+          <h2 id="request-title">Explica'ns com &eacute;s la teva entitat</h2>
+          <p>Omple el formulari i es preparar&agrave; un correu amb la informaci&oacute; b&agrave;sica per valorar com adaptar Entitapp a les vostres necessitats.</p>
+        </div>
 
+        <form class="request-form" id="access-request-form">
+          <label>Nom de l'entitat
+            <input name="entityName" required />
+          </label>
+          <label>Persona de contacte
+            <input name="contactName" required />
+          </label>
+          <label>Correu electr&ograve;nic
+            <input name="email" type="email" required />
+          </label>
+          <label>Municipi o territori
+            <input name="location" />
+          </label>
+          <label>Tipus d'entitat
+            <select name="entityType">
+              <option>Associaci&oacute;</option>
+              <option>Club</option>
+              <option>Fundaci&oacute;</option>
+              <option>Cooperativa</option>
+              <option>Col&middot;lectiu informal</option>
+              <option>Altres</option>
+            </select>
+          </label>
+          <label>Nombre aproximat de persones
+            <input name="peopleCount" type="number" min="1" />
+          </label>
+
+          <fieldset>
+            <legend>Qu&egrave; us interessa gestionar?</legend>
+            <label><input type="checkbox" name="modules" value="Reunions" /> Reunions</label>
+            <label><input type="checkbox" name="modules" value="Activitats" /> Activitats</label>
+            <label><input type="checkbox" name="modules" value="Assistencia" /> Assist&egrave;ncia</label>
+            <label><input type="checkbox" name="modules" value="Subgrups" /> Subgrups</label>
+            <label><input type="checkbox" name="modules" value="Tasques" /> Tasques</label>
+          </fieldset>
+
+          <label class="full">Necessitats principals
+            <textarea name="needs" rows="5" placeholder="Explica breument com treballeu ara i qu&egrave; voldr&iacute;eu millorar."></textarea>
+          </label>
+
+          <label class="consent full">
+            <input type="checkbox" required />
+            Accepto enviar aquesta informaci&oacute; per correu a Entitapp.
+          </label>
+
+          <button class="button primary" type="submit">Preparar sol&middot;licitud</button>
+        </form>
+      </section>
       <section class="section contact" id="contacte" aria-labelledby="contact-title">
         <div class="section-heading">
           <p class="section-kicker">Contacte</p>
@@ -153,11 +229,13 @@
       </section>
     </main>
 
-        <footer class="site-footer">
+            <footer class="site-footer">
       <span>&copy; 2026 Entitapp</span>
     </footer>
+      <script src="script.js" defer></script>
   </body>
 </html>
+
 
 
 

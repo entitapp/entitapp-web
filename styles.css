@@ -467,3 +467,133 @@ li::marker {
     border-radius: 24px;
   }
 }
+
+.centered {
+  text-align: center;
+  margin-inline: auto;
+}
+
+.impact-map {
+  background:
+    radial-gradient(circle at 50% 0%, rgb(18 107 255 / 10%), transparent 24rem),
+    #ffffff;
+}
+
+.impact-flow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 3vw, 2rem);
+  align-items: stretch;
+}
+
+.impact-node {
+  position: relative;
+  min-height: 280px;
+  padding: 2rem;
+  border: 2px solid var(--line);
+  border-radius: 999px 999px 24px 24px;
+  background: #ffffff;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.impact-node span {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 1rem;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.impact-node.blue span { background: var(--blue); }
+.impact-node.teal span { background: var(--teal); }
+.impact-node.green span { background: var(--green); color: var(--ink); }
+
+.request-section {
+  background: #f7fbff;
+}
+
+.request-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 980px;
+}
+
+.request-form label,
+.request-form fieldset {
+  display: grid;
+  gap: 0.45rem;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.request-form input,
+.request-form select,
+.request-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+  font: inherit;
+  background: #ffffff;
+}
+
+.request-form fieldset,
+.request-form .full {
+  grid-column: 1 / -1;
+}
+
+.request-form fieldset {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1rem;
+  background: #ffffff;
+}
+
+.request-form legend {
+  grid-column: 1 / -1;
+  padding: 0 0.4rem;
+  font-weight: 900;
+}
+
+.request-form fieldset label,
+.request-form .consent {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.request-form input[type="checkbox"] {
+  width: auto;
+}
+
+.request-form button {
+  width: fit-content;
+}
+
+@media (max-width: 760px) {
+  .impact-flow,
+  .request-form {
+    grid-template-columns: 1fr;
+  }
+
+  .request-form fieldset {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-node {
+    border-radius: 24px;
+  }
+
+  .request-form button {
+    width: 100%;
+  }
+}
